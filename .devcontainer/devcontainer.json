@@ -11,7 +11,8 @@
             "npxms.hide-gitignored",
             "swellaby.vscode-rust-test-adapter",
             "JScearcy.rust-doc-viewer",
-            "vadimcn.vscode-lldb"
+            "vadimcn.vscode-lldb",
+            "ms-azuretools.vscode-docker"
         ]}
     },
     "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}"

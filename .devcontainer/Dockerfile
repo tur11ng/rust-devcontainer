@@ -6,7 +6,7 @@ RUN apt update
 RUN apt install --yes build-essential git
 RUN apt install --yes llvm clang \
     libclang-dev lld gdb clangd \
-    curl
+    curl mingw-w64
 
 # Rust prerequisites
 RUN curl https://sh.rustup.rs -sSf | \
@@ -18,6 +18,7 @@ RUN rustup override set stable
 RUN rustup component add rust-src
 RUN rustup component add rustfmt
 RUN rustup component add clippy
+RUN rustup target add x86_64-pc-windows-gnu
 RUN cargo install --locked bindgen-cli
 
 WORKDIR /workspaces
