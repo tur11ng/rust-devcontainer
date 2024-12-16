@@ -1,6 +1,6 @@
 {
     "name": "Rust Devcontainer",
-    "image": "ghcr.io/tur11ng/rust-devcontainer:v1.0.0",
+    "image": "ghcr.io/tur11ng/rust-devcontainer:latest",
     "customizations": {
         "vscode": {
         "extensions": [

@@ -39,6 +39,6 @@ jobs:
           context: ./devcontainer/
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/your-image-name:${{ env.VERSION }}
-          cache-from: type=registry,ref=ghcr.io/${{ github.repository_owner }}/your-image-name:cache
-          cache-to: type=registry,ref=ghcr.io/${{ github.repository_owner }}/your-image-name:cache,mode=max
+            ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:${{ env.VERSION }}
+          cache-from: type=registry,ref=ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:cache
+          cache-to: type=registry,ref=ghcr.io/${{ github.repository_owner }}/${{ github.event.repository.name }}:cache,mode=max
